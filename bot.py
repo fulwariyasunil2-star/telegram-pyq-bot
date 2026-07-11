@@ -1,8 +1,7 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-BOT_TOKEN = 8864004884:AAEaTJXLOlrZg5fuWizAJCt7z_o1vLX4Fi4
-
+BOT_TOKEN = "8864004884:AAGjdNDNlU8l3V4ZBPdzMvo8JlfCEox-Klg"
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "🙏 Welcome to Rajasthan Exam PYQ Bot!\n\n"
