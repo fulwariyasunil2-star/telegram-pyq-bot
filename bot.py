@@ -1,7 +1,8 @@
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-BOT_TOKEN = "8864004884:AAGjdNDNlU8l3V4ZBPdzMvo8JlfCEox-Klg"
+BOT_TOKEN = os.getenv("8864004884:AAGjdNDNlU8l3V4ZBPdzMvo8JlfCEox-Klg")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
@@ -10,6 +11,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 app = ApplicationBuilder().token(BOT_TOKEN).build()
+
 app.add_handler(CommandHandler("start", start))
 
 if __name__ == "__main__":
